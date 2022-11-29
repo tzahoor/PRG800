@@ -198,6 +198,13 @@ const options = { fillColor: '#FFFFFF', strokeColor: '#0000FF' };
       
     </tbody>
   </Table>
+  <div className='button'>
+    <button onClick={handleClick} className="ShowTheHighest">Check Score</button>
+    {MediumScore ? <p style={{color:"orange"}}>your risk score is <span style={{fontWeight:'bold'}} >Medium</span> we advise you to request a report</p>:<div></div>}
+    {LowScore ? <p style={{color:"green"}}> your risk score is <span style={{fontWeight:'bold'}} >low</span> but you can still request a report</p>:<div></div>}
+    {HighScore ? <p style={{color:"orangered"}}>your risk score is <span style={{fontWeight:'bold'}} >high</span> we advise you to request a report</p>:<div></div>}
+    {CriticalScore ? <p style={{color:'red'}}>your risk score is <span style={{fontWeight:'bold'}} >Critical</span> we advise you to request a report</p>:<div></div>}
+  </div>
   <div className="TableValue">
           <div className='FlexResultNumber'>
           <p>low: {Low}</p>
@@ -215,14 +222,8 @@ const options = { fillColor: '#FFFFFF', strokeColor: '#0000FF' };
           height='400'
           options={options}
       />
-  <div className='button'>
-    <button onClick={handleClick} className="ShowTheHighest">Check the highest</button>
-    {MediumScore ? <p style={{color:"orange"}}>your risk score is Medium we advise you to request a report</p>:<div></div>}
-    {LowScore ? <p style={{color:"green"}}> your risk score is Low but you can still request a report</p>:<div></div>}
-    {HighScore ? <p style={{color:"rebeccapurple"}}>your risk score is High we advise you to request a report</p>:<div></div>}
-    {CriticalScore ? <p style={{color:'red'}}>your risk score is Critical we advise you to request a report</p>:<div></div>}
-  </div>
-   <button onClick={handlebutton}> REQUEST A REPORT </button>
+      <div>
+      <button onClick={handlebutton}> REQUEST A REPORT </button>
    {visible &&  <div className='RequestAform' >
    <div className='values'>
       <label>Email</label>
@@ -233,6 +234,8 @@ const options = { fillColor: '#FFFFFF', strokeColor: '#0000FF' };
     
 
    </div>}
+      </div>
+   
   
 
   </div>
