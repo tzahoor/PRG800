@@ -1,0 +1,378 @@
+/** @type {import('tailwindcss').Config} */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: navy !important;
+  padding: 20px 0;
+  margin: 0;
+  
+  padding:0 30px;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header ul li button{
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+.header .logo a{
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.header ul .FlexOption{
+  display: flex;
+  margin-top: 10px;
+  
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+.header ul{
+  align-items: center;
+}
+.header ul li{
+  align-items: center;
+  list-style: none;
+
+}
+.header .center{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.heading p {
+  color: #828282;
+}
+
+
+.mainbox{
+  max-height: 100%;
+  width: auto;
+  
+  color: #000;
+
+}
+.mainbox .center{
+  align-items: center;
+  text-align: center;
+  
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.mainbox .center .buttonDiv{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.mainbox .center .ParagraphDiv{
+  margin-top: 40px;
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    line-height: 8px;
+}
+.mainbox .center .buttonDiv button{
+  width: 150px;
+  padding: 5px;
+  
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  background-color: navy;
+  color: white;
+  border-radius: 10px;
+  border-style: none;
+  align-items: center;
+  border: 2px solid navy;
+}
+
+.mainbox .center .buttonDiv button a{
+  text-decoration: none !important;
+  color: white;
+}
+.LoginContainer{
+  
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  
+}
+.LoginContainer .formsubmit{
+  align-items: center;
+  text-align: center;
+  margin-top: 200px;
+  
+}
+.LoginContainer .formsubmit .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.LoginContainer .formsubmit .inputs p{
+  color: red;
+}
+.LoginContainer .formsubmit input{
+  width: 400px;
+  margin-left: 0 !important;
+  margin: 10px;
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+
+  border: 1px solid navy;
+  
+  
+}
+.LoginContainer .formsubmit input:hover{
+  border: 2px solid navy;
+  
+}
+.LoginContainer .formsubmit .inputs .values{
+ display: flex;
+ flex-direction: column;
+ align-items:flex-start;
+ text-align: start;
+}
+.LoginContainer .formsubmit button{
+  background-color: navy;
+  font-size: large;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 10px;
+  color: white;
+}
+.LoginContainer .text{
+  margin-top: 10px;
+}
+.SignUpContainer{
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.SignUpContainer h1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.SignUpContainer .SignUpForm{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+.SignUpContainer .SignUpForm .value{
+  display: flex;
+ flex-direction: column;
+ align-items:flex-start;
+ text-align: start;
+}
+.SignUpContainer .SignUpForm input{
+  width: 400px;
+  margin-left: 0 !important;
+  margin: 10px;
+  font-size: large;
+  padding: 10px;
+  border-radius:10px ;
+  border: 1px solid navy;
+}
+.SignUpContainer .SignUpForm input:hover{
+  border: 2px solid navy;
+}
+.SignUpContainer .SignUpForm p{
+  color: red;
+}
+.SignUpContainer .SignUpForm button{
+  background-color: navy;
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+  border-style: none;
+  border: 2px solid navy;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+.QuestionContainer{
+ padding: 10px;
+
+  
+}
+
+.QuestionContainer h1{
+  margin-top: 20px;
+ text-align: center;
+}
+.QuestionContainer .QuestionForm .questionSpacing{
+  margin: 10px;
+}
+.QuestionContainer .QuestionForm .ChoicesFlex{
+
+ margin: 10px;
+}
+.radiobutton{
+  margin-right: 5px;
+}
+.QuestionContainer .QuestionForm h3{
+  font-size: 18px;
+}
+.singleChoiceMargin{
+  margin: 10px;
+  font-size: 16px ;
+}
+.QuestionContainer .QuestionForm button{
+  background-color:navy;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: large;
+  border-style: none;
+  color: white;
+ 
+  text-align: center;
+}
+.JoinResult{
+  display: flex;
+
+ 
+}
+.Result{
+  margin: 10px;
+}
+.Result h1{
+ text-align: center;
+ font-size: 30px;
+}
+.FlexResultNumber{
+  display: flex;
+  margin: 50px;
+  
+}
+.FlexResultNumber p{
+  font-size: 18px;
+  margin: 5px;
+  padding: 30px;
+  font-weight: 300;
+  padding-bottom: 0 !important;
+}
+.TableContainer{
+  margin: 10px;
+}
+.buttonDiv{
+  text-align: center;
+  align-items: center;
+}
+.buttondiv .ShowTheHighest{
+ 
+  background-color: navy;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+
+
+}
+.TableContainer button{
+  margin-top: 20px;
+  background-color: navy;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+.RequestAform .values{
+  margin-top: 13px;
+}
+.RequestAform .values input{
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid navy;
+}
+.button p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.TableValue .FlexResultNumber{
+  margin-top: 0%;
+}
+.ShowTheHighestResultButton{
+  margin-top: 10px;
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: navy;
+  color: white;
+}
+.ResultDiv{
+  margin-left: 10px;
+}
