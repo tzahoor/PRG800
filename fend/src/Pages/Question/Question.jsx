@@ -48,62 +48,62 @@ const Question = () => {
     }
   const Question = [
     {
-      questiontitle: "Are backups done and encrypted?",
+      questiontitle: " Are you using a trusted ISP(Internet Service Provider)? ",
       choices: [
-        { Q: "Yes, once a month", A:"LowLow"},
-        { Q: "No, planning to do it", A:"MediumMedium"},
-        { Q: "Yes, once a year", A:"LowMedium"},
+        { Q: "Yes", A:"LowLow"},
+        { Q: "Maybe", A:"MediumMedium"},
+        { Q: "No", A:"HighHigh"},
       ],
     },
     {
-      questiontitle: "Are backups stored externally and secured?",
+      questiontitle: "Have you implemented any Intrusion Detection and/or Intrusion Prevention Systems?",
       choices: [
-        { Q: "Yes, once a month", A:"LowLow"},
-        { Q: "No, planning to do it", A:"MediumHigh"},
-        { Q: "Yes, once a year", A:"LowMedium"},
+        { Q: "Yes, both", A:"LowLow"},
+        { Q: "Only one is in use", A:"MediumMedium"},
+        { Q: "No, None", A:"HighMedium"},
+      ],
+    },
+    {
+      questiontitle: "Are you utilizing cloud-based services for your website?",
+      choices: [
+        { Q: "No, On premises", A:"LowLow"},
+        { Q: "Yes, Cloud based", A:"HighMedium"},
+        { Q: "Hybrid", A:"MediumMedium"},
       ],
     },
     {
       questiontitle: "Are important patches done and systems are updated?",
       choices: [
-        { Q: "Yes, once a month", A:"LowLow"},
-        { Q: "No, planning to do it", A:"MediumLow"},
-        { Q: "Yes, once a year", A:"LowLow"},
-      ],
-    },
-    {
-      questiontitle: "Do you have IDP and IPS implemented to monitor traffics?",
-      choices: [
-        { Q: "Yes, we have IDP and IPS active", A:"LowLow"},
-        { Q: "No, we don't have both", A:"HighHigh"},
-        { Q: "We only have IDP", A: "MediumMedium"},
+        { Q: "Yes, every month", A:"LowLow"},
+        { Q: "No, never bother", A:"HighHigh"},
       ],
     },
     {
       questiontitle:
-        "Are suspected traffic on network reported and investigated?",
+        "How often do you backup your website?",
       choices: [
         { Q: "Yes, regularly", A:"LowLow"},
-        { Q: "No, we don't report suspected traffic", A:"LowMedium"},
-        { Q: "We sometimes report suspected", A:"LowMedium"},
+        { Q: "Once in a week", A:"MediumMedium"},
+        { Q: "Once in a month", A:"HighMedium"},
       ],
     },
     {
       questiontitle:
-        " Do you audit and analyse security and firewall logs regularly?",
+        "Are backups stored externally and secured?",
       choices: [
         { Q: "Yes, regularly", A:"LowLow"},
-        { Q: "No, we don't audit and analyze firewall logs", A:"HighMedium"},
-        { Q: "We sometimes review firewall logs", A:"LowMedium"},
+        { Q: "No, weekly", A:"HighMedium"},
+        { Q: "No, monthly", A:"HighMedium"},
       ],
     },
     {
       questiontitle:
-        " Are suspected traffic on network reported and investigated?",
+        " How often do you monitor network traffic and analyze security logs?",
       choices: [
-        { Q: "Yes, regularly", A:"LowMedium"},
-        { Q: "No, we don't report suspected traffic", A:"HighHigh"},
-        { Q: "We sometimes report suspected", A:"MediumHigh"},
+        { Q: "Yes, regularly", A:"LowLow"},
+        { Q: "No, weekly", A:"LowMedium"},
+        { Q: "No, monthly", A:"MediumMedium"},
+        { Q: "Do not monitor", A:"HighHigh"},
       ],
     },
   ];
