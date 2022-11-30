@@ -45,91 +45,64 @@ const DataSecurity = () => {
     }
   const Question = [
     {
-      questiontitle: "Do you manage and control personnel access to sensitive data, systems, and facilities?",
+      questiontitle: "Do you install patches and plugins from reputable and legitimate sources?",
       choices: [
-        { Q: "Yes", A: "LowLow" },
-        { Q: "No", A: "HighMedium" },
-        { Q: "Maybe", A: "MediumLow" },
+        { Q: "Yes, always", A: "LowLow" },
+        { Q: "Mostly", A: "MediumMedium" },
+        { Q: "A few times", A: "HighMedium" },
+        { Q: "Never", A: "HighHigh" },
       ],
     },
     {
-      questiontitle: "Do you have proper process for authorizing, establishing, and modifying access to sensitive data?",
+      questiontitle: "Have you created a team dedicated for security issues?",
       choices: [
-        { Q: "Yes", A: "LowLow" },
-        { Q: "No", A: "HighMedium" },
-        { Q: "Maybe", A: "MediumMedium" },
+        { Q: "Yes, we have an in-house team ", A: "LowLow" },
+        { Q: "No, we have a third party providing support", A: "MediumMedium" },
+        { Q: "No, don't plan to have one", A: "HighHigh" },
       ],
     },
     {
-      questiontitle: "Do you ensure all your workforce members have appropriate access to sensitive data, systems,and server?",
+      questiontitle: "Do you have a antivirus software in place?",
       choices: [
         { Q: "Yes", A: "LowLow" },
-        { Q: "No", A: "HighLow" },
-        { Q: "Partially", A: "MediumLow" },
+        { Q: "No", A: "HighHigh" },
       ],
     },
     {
-      questiontitle: "Users have more access rights than needed to complete daily tasks",
+      questiontitle: "Have you ever considered IP Geo blocking?",
       choices: [
-        { Q: "Yes", A: "HighHigh" },
-        { Q: "No", A: "LowLow" },
-        { Q: "Partially", A: "MediumHigh" },
+        { Q: "Yes, blocked a few geo-locations", A: "LowLow" },
+        { Q: "No", A: "HighHigh" },
+        { Q: "Partially", A: "MediumMedium" },
       ],
     },
     {
       questiontitle:
-        "Do you use encryption to control access to sensitive data?",
+        "Do you perform security testing?",
       choices: [
-        { Q: "Yes", A: "HighMedium" },
-        { Q: "No", A: "LowLow" },
+        { Q: "Yes, regularly", A: "LowLow" },
+        { Q: "No", A: "HighHigh" },
+        { Q: "Yes, once a year", A: "MediumMedium" },
+      ],
+    },
+    {
+      questiontitle:
+        "Do you employ encyption, decryption and digital signatures and certificates for sensitive information? ",
+      choices: [
+        { Q: "Yes", A: "LowLow" },
+        { Q: "No", A: "HighHigh" },
         { Q: "Only some sensitive data is encrypted", A: "MediumMedium" },
       ],
     },
     {
       questiontitle:
-        " Is Information system access granted to unauthorized personnel?",
+        " Do you follow RBAC (Role Based Access Control) assigning permissions to employees based on their roles?",
       choices: [
-        { Q: "Yes", A: "HighHigh" },
-        { Q: "No", A: "LowLow" },
-        { Q: "Sometime, when there is a review", A: "MediumHigh" },
+        { Q: "Yes", A: "LowLow" },
+        { Q: "No", A: "MediumMedium" },
+        { Q: "Partially", A: "MediumMedium" },
       ],
     },
-    {
-      questiontitle:
-        " Do you disclose passwords and or login information to third party?",
-      choices: [
-        { Q: "Yes", A: "HighMedium" },
-        { Q: "No", A: "LowLow" },
-        { Q: "In some cases", A: "MediumMedium" },
-      ],
-    },
-    {
-      questiontitle:
-        "Do you use security settings and mechanisms to record and examine system activity?",
-      choices: [
-        { Q: "Yes, we do it regularly", A: "HighMedium" },
-        { Q: "No", A: "LowHigh" },
-        { Q: "Yes, we do it sometimes", A: "MediumHigh" },
-      ],
-    },
-    {
-        questiontitle:
-          "Is virus detection and elimination software installed and activated?",
-        choices: [
-          { Q: "Yes, always", A: "LowMedium" },
-          { Q: "No", A: "MediumHigh" },
-          { Q: "Yes, we do it occassionally", A: "MediumMedium" },
-        ],
-      },
-      {
-        questiontitle:
-          "Is penetration testing performed on the system",
-        choices: [
-          { Q: "Yes, regularly", A: "LowHigh" },
-          { Q: "No, we don't perform any pen testing", A: "HighHigh" },
-          { Q: "We do pen testing once a year", A: "MediumHigh" },
-        ],
-      },
   ];
   const handleSubmit=async(e)=>{
     e.preventDefault()
