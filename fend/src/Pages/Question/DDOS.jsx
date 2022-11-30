@@ -43,91 +43,93 @@ const DDOS = () => {
     }
   const Question = [
     {
-      questiontitle: "Do you audit and analyze security and firewall logs regularly?",
+      questiontitle: "Have you implemented strong firewall and network security group rules?",
       choices: [
-        { Q: "Yes, audit has been done regularly ", A: "LowLow" },
-        { Q: "No audit it done in past 5 years", A: "HighMedium" },
-        { Q: "We consider to do it ", A: "LowMedium" },
+        { Q: "Yes ", A: "LowLow" },
+        { Q: "In progress", A: "MediumMedium" },
+        { Q: "No ", A: "HighHigh" },
       ],
     },
     {
-      questiontitle: "Are security monitoring tools in place?",
+      questiontitle: "Are you using any Ddos Mitigation/Protection service to detect and redirect abnormal",
       choices: [
-        { Q: "Any Anti-Virus or monitoring tool has been implemneted ", A: "LowMedium" },
-        { Q: "No, Monitoring tool is in Place", A: "LowMedium" },
-        { Q: "Older version of monitoring tool is places ", A: "MediumMedium" },
-        { Q: "No, yet implemented but planning to implement new one", A: "HighHigh" },
+        { Q: "Yes", A: "LowLow" },
+        { Q: "No", A: "LowHigh" },
       ],
     },
     {
-      questiontitle: "Have you experienced any denial-of-service incident before?",
+      questiontitle: "Is a disaster recovery plan developed in case of an attack?",
       choices: [
-        { Q: "Have any incident of DDoS attack on the past", A: "HighLow" },
-        { Q: "Disruption of business processes or information system function", A: "HighHigh" },
-        { Q: "No attack has been ever happened ", A: "LowMedium" },
-        { Q: "Attack happened but detected by monitoring tool", A: "LowLow" },
+        { Q: "Yes, a detailed low-level plan is there", A: "LowLow" },
+        { Q: "Yes, but on a high level", A: "MediumMedium" },
+        { Q: "No Recovery Plan", A: "HighHigh" },
       ],
     },
     {
-      questiontitle: "Are IDP and IPS in place to manage network?",
+      questiontitle: "With how many organizations do you share your web server? Or Does your hosting provider have a large number of clients, all using the same server? ",
       choices: [
-        { Q: "Any detection and Prevention Tools in Places", A: "LowMedium" },
-        { Q: "No Intrusion detection and prevention tool", A: "HighHigh" },
-        { Q: "Only one of them Implemented ", A: "MediumMedium" },
-      ],
-    },
-    {
-      questiontitle:
-        "Is there a dedicated security team in place to manage security issues?",
-      choices: [
-        { Q: "Have you have any inhouse IT security team", A: "MediumMedium" },
-        { Q: "Have you have 3 party security team", A: "LowLow" },
-        { Q: "No need for security team loss of budget", A: "HighHigh" },
+        { Q: "Shared with alot of clients", A: "HighHigh" },
+        { Q: "Shared with a few clients", A: "MediumMedium" },
+        { Q: "Do not share at all ", A: "LowLow" },
       ],
     },
     {
       questiontitle:
-        " Do you monitor unauthorized access request on the network?",
+        "Are your DNS records hidden and protected from outside attacks?",
       choices: [
-        { Q: "Have any unauthorzied traffic ever try to access network and they are successful", A: "LowLow" },
-        { Q: "No such incident occur in the past", A: "MediumMedium" },
-        { Q: "There has been lot of unauthorize traffic in the past", A: "HighHigh" },
+        { Q: "Yes", A: "LowLow" },
+        { Q: "No", A: "HighHigh" },
       ],
     },
     {
       questiontitle:
-        "Are suspected traffic on network reported?",
+        " Does your network have enough bandwidth to provision traffic that caters your need ?",
       choices: [
-        { Q: "Have traffice report provided to you according to suspected and unauthrized  to you", A: "HighHigh" },
-        { Q: "No traffice report ever reported to you", A: "LowLow" },
-        { Q: "There might few incident in the past in which we get the reports of the unknown traffic", A: "HighMedium" },
+        { Q: "Yes", A: "LowLow" },
+        { Q: "No", A: "HighHigh" },
+      ],
+    },
+    {
+      questiontitle:
+        "Have you faced any DDoS attack or network outage in the past?",
+      choices: [
+        { Q: "Yes, it has occured", A: "HighHigh" },
+        { Q: "No, it has never occured", A: "LowLow" },
+        { Q: "Yes, but detected by the security tools", A: "MediumMedium" },
       ],
     },
     {
         questiontitle:
-          "Is network redundancy provided in the network topology?",
+          "Do you have any automated monitoring tool with security alerts? eg (PTRG,Colasoft)",
         choices: [
-          { Q: "Are there any other paths to reach the network in case of attack", A: "HighMedium" },
-          { Q: "No such path ever created ", A: "MediumMedium" },
-          { Q: "We have path but never perform the load testing on it", A: "HighHigh" },
+          { Q: "Yes, its being used ", A: "LowLow" },
+          { Q: "No, not implimented ", A: "HighHigh" },
+          { Q: "Yes but older versions", A: "MediumMedium" },
         ],
       },
       {
         questiontitle:
-          "Do you have defense in depth strategy in place to protect assets and data?",
+          "Any unknown or suspicious network traffic reported in the past?",
         choices: [
-          { Q: "Do you have any strategy document to follow in case of attack", A: "LowHigh" },
-          { Q: "No we do no know what to do in case of attack", A: "HighHigh" },
-          { Q: "We have strategy but never have been updated ", A: "MediumMedium" },
+          { Q: "No such traffic encountered", A: "LowLow" },
+          { Q: "Yes, but once in a while", A: "HighMedium" },
+          { Q: "Yes, many times ", A: "HighHigh" },
         ],
       },
       {
         questiontitle:
-          "Is load balancing employed to protect critical resources from exposure?",
+          "Does the network topology allows redundancies with more than one ways to reach a system?",
         choices: [
-          { Q: "Have any load balancer in place to manage traffice", A: "LowMedium" },
-          { Q: "No such methodolgy in place", A: "HighHigh" },
-          { Q: "No new server added since last 2 years ", A: "MediumMedium" },
+          { Q: "Yes", A: "LowLow" },
+          { Q: "No", A: "HighHigh" },
+        ],
+      },
+      {
+        questiontitle:
+          "Have you implemented load balancing to handle huge traffic?",
+        choices: [
+          { Q: "Yes", A: "LowLow" },
+          { Q: "No", A: "HighHigh" },
         ],
       },
   ];
